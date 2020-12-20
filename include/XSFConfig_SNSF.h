@@ -18,26 +18,26 @@
 
 class XSFConfig_SNSF : public XSFConfig {
 protected:
-  static bool /*initSixteenBitSound, */ initReverseStereo;
-  static unsigned initResampler;
-  static std::string initMutes;
+    static bool /*initSixteenBitSound, */ initReverseStereo;
+    static unsigned initResampler;
+    static std::string initMutes;
 
-  friend class XSFConfig;
-  bool /*sixteenBitSound, */ reverseStereo;
-  std::bitset<8> mutes;
+    friend class XSFConfig;
+    bool /*sixteenBitSound, */ reverseStereo;
+    std::bitset<8> mutes;
 
-  XSFConfig_SNSF();
-  void LoadSpecificConfig();
-  void SaveSpecificConfig();
-  void GenerateSpecificDialogs();
-  INT_PTR CALLBACK ConfigDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam,
-                                    LPARAM lParam);
-  void ResetSpecificConfigDefaults(HWND hwndDlg);
-  void SaveSpecificConfigDialog(HWND hwndDlg);
-  void CopySpecificConfigToMemory(XSFPlayer *xSFPlayer, bool preLoad);
+    XSFConfig_SNSF();
+    void LoadSpecificConfig();
+    void SaveSpecificConfig();
+    void GenerateSpecificDialogs();
+    INT_PTR CALLBACK ConfigDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam,
+                                      LPARAM lParam);
+    void ResetSpecificConfigDefaults(HWND hwndDlg);
+    void SaveSpecificConfigDialog(HWND hwndDlg);
+    void CopySpecificConfigToMemory(XSFPlayer *xSFPlayer, bool preLoad);
 
 public:
-  unsigned resampler;
+    unsigned resampler;
 
-  void About(HWND parent);
+    void About(HWND parent);
 };

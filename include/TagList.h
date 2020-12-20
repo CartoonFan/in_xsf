@@ -16,22 +16,22 @@
 
 class TagList {
 public:
-  typedef std::map<std::string, std::string, lt_str> Tags;
-  typedef std::vector<std::string> TagsList;
+    typedef std::map<std::string, std::string, lt_str> Tags;
+    typedef std::vector<std::string> TagsList;
 
 private:
-  static eq_str eqstr;
+    static eq_str eqstr;
 
-  Tags tags;
-  TagsList tagsOrder;
+    Tags tags;
+    TagsList tagsOrder;
 
 public:
-  TagList() : tags(), tagsOrder() {}
-  const TagsList &GetKeys() const;
-  TagsList GetTags() const;
-  bool Exists(const std::string &name) const;
-  std::string operator[](const std::string &name) const;
-  std::string &operator[](const std::string &name);
-  void Remove(const std::string &name);
-  void Clear();
+    TagList() : tags(), tagsOrder() {}
+    const TagsList &GetKeys() const;
+    TagsList GetTags() const;
+    bool Exists(const std::string &name) const;
+    std::string operator[](const std::string &name) const;
+    std::string &operator[](const std::string &name);
+    void Remove(const std::string &name);
+    void Clear();
 };
