@@ -7,7 +7,7 @@
 
 #ifdef _MBCS
 #error                                                                         \
-    "_MBCS (multi-byte character set) is defined, but only Unicode is supported"
+"_MBCS (multi-byte character set) is defined, but only Unicode is supported"
 #endif
 #undef _UNICODE
 #define _UNICODE // For [tchar.h]
